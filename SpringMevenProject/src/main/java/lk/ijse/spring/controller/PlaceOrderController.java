@@ -38,7 +38,7 @@ public class PlaceOrderController {
        return new ResponseUtil(200, "Deleted", null);
    }
 
-   @GetMapping(path = "{/resid}", produces = MediaType.APPLICATION_JSON_VALUE)
+   @GetMapping(path = "{resid}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseUtil searchReservationDto (@PathVariable String resid) {
        return new ResponseUtil(200,"OK",purchaseReservationService.searchReservationDto(resid));
    }
